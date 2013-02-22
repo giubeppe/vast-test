@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class GetVast
+ * The servlet needs to live in the root "/" context. The following commands are available:
+ * http://.../getvast				returns a vast file
+ * http://.../getvast?wrap			returns a wrapper pointing to a vast file
+ * http://.../getvast?comp			returns a vast file with companion
+ * http://.../getvast?compw			returns a wrapper with a companion  
+ * http://.../getvast?wrap&comp		returns a wrapper pointing to a vast file with a companion
  */
 @WebServlet(name = "getvast", urlPatterns = { "/getvast" })
 public class GetVast extends HttpServlet {
@@ -23,7 +29,6 @@ public class GetVast extends HttpServlet {
      */
     public GetVast() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
