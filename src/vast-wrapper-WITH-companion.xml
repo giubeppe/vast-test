@@ -1,0 +1,65 @@
+<VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast_2.0.1.xsd">
+	<Ad id="9696">
+		<Wrapper>
+			<AdSystem>PubMatic</AdSystem>
+			<VASTAdTagURI>
+				http://localhost:8080/getvast
+			</VASTAdTagURI>
+			<Error>http://myErrorURL/wrapper/error</Error>
+			<Impression><![CDATA[http://localhost:8080/tracker?wrap&event=impression]]></Impression>
+			<Creatives>
+				<Creative AdID="2323">
+					<Linear>
+						<TrackingEvents>
+							<Tracking event="firstQuartile">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=firstQuartile]]>
+							</Tracking>
+							<Tracking event="midpoint">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=midPoint]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=thirdQuartile]]>
+							</Tracking>
+							<Tracking event="complete">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=complete]]>
+							</Tracking>
+							<Tracking event="mute">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=mute]]>
+							</Tracking>
+							<Tracking event="unmute">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=unmute]]>
+							</Tracking>
+							<Tracking event="pause">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=pause]]>
+							</Tracking>
+							<Tracking event="resume">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=resume]]>
+							</Tracking>
+							<Tracking event="fullscreen">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=fullscreen]]>
+							</Tracking>
+							<Tracking event="close">
+								<![CDATA[http://localhost:8080/tracker?wrap&event=close]]>
+							</Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickTracking><![CDATA[http://localhost:8080/tracker?wrap&event=click]]></ClickTracking>
+						</VideoClicks>
+					</Linear>
+				</Creative>
+				<Creative AdID="2323">
+					<CompanionAds>
+						<Companion width="300" height="250">
+							<StaticResource creativeType="image/png"><![CDATA[http://localhost:8080/MB_300x250_2.png]]></StaticResource>
+							<TrackingEvents>
+								<Tracking event="creativeView">
+									<![CDATA[http://localhost:8080/tracker?wrap&event=compImp]]>
+								</Tracking>
+							</TrackingEvents>
+						</Companion>
+					</CompanionAds>
+				</Creative>
+			</Creatives>
+		</Wrapper>
+	</Ad>
+</VAST>

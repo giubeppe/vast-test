@@ -1,0 +1,44 @@
+<VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast_2.0.1.xsd">
+	<Ad id="5943516">
+		<InLine>
+			<AdSystem>MediaMind</AdSystem>
+			<AdTitle>Titan_30_300x60 CB_flv </AdTitle>
+			<Description>Titan_30_300x60 CB_flv </Description>
+			<Impression id="Impression"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=riis&pl=VAST&pos=4876&c=24&ai=12170411&pluid=0&ord=186316088&dg=854553&ta=-1&pcp=]]></Impression>
+			<Impression id="AgencyImpTrackingURL"><![CDATA[http://b.scorecardresearch.com/p?c1=3&c2=6034817&c3=272695&c4=12170411&c5=5943516&c6=&c10=1&c11=&c13=N/A&c16=mm&cj=1&ax_fwd=1&rn=[TIMESTAMP]&]]></Impression>
+			<Creatives>
+				<Creative id="12170411" sequence="1" AdID="12170411">
+					<Linear>
+						<Duration>00:00:30</Duration>
+						<TrackingEvents>
+							<Tracking event="start"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^ebVideoStarted~0~0~1~0~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="firstQuartile"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^eb25Per_Played~0~0~1~0~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="midpoint"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^eb50Per_Played~0~0~1~0~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="thirdQuartile"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^eb75Per_Played~0~0~1~0~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="complete"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^ebVideoFullPlay~0~0~1~0~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="mute"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^ebVideoMute~0~0~1~1~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="unmute"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^ebVideoUnmuted~0~0~1~1~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="pause"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^ebVideoPause~0~0~1~1~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+							<Tracking event="fullscreen"><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=isi&pl=VAST&interactionsStr=12170411~~0^ebFSStart~0~0~1~1~1~26196452~0&pos=4876&ebRandom=186316088&dg=854553&ta=-1]]></Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickThrough><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bisi&pl=VAST&ai=12170411&pluid=0&p=&pos=4876&ord=186316088&dg=854553&ta=-1]]></ClickThrough>
+						</VideoClicks>
+						<MediaFiles>
+							<MediaFile id="26196452" delivery="progressive" type="video/x-flv"
+								bitrate="1548" width="960" height="540">http://ds.serving-sys.com/BurstingRes//Site-5031/Type-12/d21b1dfd-0549-40f2-b3c1-751a2175b89f.flv</MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+				<Creative id="12170411" AdID="12170411">
+					<CompanionAds>
+						<Companion id="26325411" width="300" height="60">
+							<StaticResource creativeType="image/gif"><![CDATA[http://ds.serving-sys.com/BurstingRes/Site-5031/Type-0/0f1e45cc-dbdf-46bb-9ebd-bd170c1fbe71.gif]]></StaticResource>
+							<CompanionClickThrough><![CDATA[http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bisi&pl=VAST&ai=12170411&pluid=0&p=&pos=4876&ord=186316088&dg=854553&ta=-1]]></CompanionClickThrough>
+						</Companion>
+					</CompanionAds>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+</VAST>
