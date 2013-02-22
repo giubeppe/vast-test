@@ -3,47 +3,47 @@
 		<Wrapper>
 			<AdSystem>PubMatic</AdSystem>
 			<VASTAdTagURI>
-				http://localhost:8080/getvast
+				${DOMAIN}/getvast
 			</VASTAdTagURI>
 			<Error>http://myErrorURL/wrapper/error</Error>
-			<Impression><![CDATA[http://localhost:8080/tracker?wrap&event=impression]]></Impression>
+			<Impression><![CDATA[${DOMAIN}/tracker?wrap&event=impression]]></Impression>
 			<Creatives>
 				<Creative>
 					<Linear>
 						<TrackingEvents>
 							<Tracking event="firstQuartile">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=firstQuartile]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=firstQuartile]]>
 							</Tracking>
 							<Tracking event="midpoint">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=midPoint]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=midPoint]]>
 							</Tracking>
 							<Tracking event="thirdQuartile">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=thirdQuartile]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=thirdQuartile]]>
 							</Tracking>
 							<Tracking event="complete">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=complete]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=complete]]>
 							</Tracking>
 							<Tracking event="mute">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=mute]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=mute]]>
 							</Tracking>
 							<Tracking event="unmute">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=unmute]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=unmute]]>
 							</Tracking>
 							<Tracking event="pause">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=pause]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=pause]]>
 							</Tracking>
 							<Tracking event="resume">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=resume]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=resume]]>
 							</Tracking>
 							<Tracking event="fullscreen">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=fullscreen]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=fullscreen]]>
 							</Tracking>
 							<Tracking event="close">
-								<![CDATA[http://localhost:8080/tracker?wrap&event=close]]>
+								<![CDATA[${DOMAIN}/tracker?wrap&event=close]]>
 							</Tracking>
 						</TrackingEvents>
 						<VideoClicks>
-							<ClickTracking><![CDATA[http://localhost:8080/tracker?wrap&event=click]]></ClickTracking>
+							<ClickTracking><![CDATA[${DOMAIN}/tracker?wrap&event=click]]></ClickTracking>
 						</VideoClicks>
 					</Linear>
 				</Creative>

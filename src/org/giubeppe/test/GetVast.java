@@ -4,12 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.giubeppe.test.utils.Macros;
 
 /**
  * Servlet implementation class GetVast
@@ -62,13 +66,28 @@ public class GetVast extends HttpServlet {
 
 		System.out.println("Serving template: '"+vastTemplate+"'");
 		
-		String lines = getResourceAsString(vastTemplate);
+		String lines = getResourceAsStringAndExpandMacros(vastTemplate, getMacros(request));
 
 		response.setContentType("text/xml");
 		response.getWriter().write(lines);
 	}
 
-	private String getResourceAsString(String resourcePath) throws IOException {
+	private Map<String, String> getMacros(HttpServletRequest request) {
+		
+		
+		Map<String, String> theMacros = new HashMap<String, String>();
+		
+		String serverName = request.getServerName();
+		String serverPort = new Integer(request.getServerPort()).toString();
+		String serverScheme = request.getScheme();
+
+		theMacros.put("\\$\\{DOMAIN\\}", serverScheme+"://"+serverName+":"+serverPort);
+		theMacros.put("\\$\\{DATE\\}", new java.util.Date().toString());
+		
+		return theMacros;
+	}
+	
+	private String getResourceAsStringAndExpandMacros(String resourcePath, Map<String, String> macros) throws IOException {
 		InputStream is = this.getClass().getClassLoader()
 				.getResourceAsStream(resourcePath);
 		BufferedReader in = new BufferedReader(new InputStreamReader(is));
@@ -77,6 +96,9 @@ public class GetVast extends HttpServlet {
 		while ((line = in.readLine()) != null) {
 			lines += line + "\n";
 		}
+		
+		lines = Macros.expandMacros(lines, macros);
+		
 		return lines;
 	}
 

@@ -1,3 +1,4 @@
+<!-- generated on ${DATE} -->
 <VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast_2.0.1.xsd">
 	<Ad id="123">
 		<InLine>
@@ -9,23 +10,23 @@
 <![CDATA[ PubMatic Test]]>
 			</Description>
 			<Impression id="PM">
-				http://localhost:8080/tracker?event=impression
+				${DOMAIN}/tracker?event=impression
 			</Impression>
 			<Creatives>
 				<Creative sequence="1" id="331">
 					<Linear>
 						<Duration>00:00:09</Duration>
 						<TrackingEvents>
-							<Tracking event="firstQuartile">http://localhost:8080/tracker?event=firstQuartile</Tracking>
-							<Tracking event="midpoint">http://localhost:8080/tracker?event=midPoint</Tracking>
-							<Tracking event="thirdQuartile">http://localhost:8080/tracker?event=thirdQuartile</Tracking>
-							<Tracking event="complete">http://localhost:8080/tracker?event=complete</Tracking>
-							<Tracking event="mute">http://localhost:8080/tracker?event=mute</Tracking>
-							<Tracking event="unmute">http://localhost:8080/tracker?event=unmute</Tracking>
-							<Tracking event="pause">http://localhost:8080/tracker?event=pause</Tracking>
-							<Tracking event="resume">http://localhost:8080/tracker?event=resume</Tracking>
-							<Tracking event="fullscreen">http://localhost:8080/tracker?event=fullscreen</Tracking>
-							<Tracking event="close">http://localhost:8080/tracker?event=close</Tracking>
+							<Tracking event="firstQuartile">${DOMAIN}/tracker?event=firstQuartile</Tracking>
+							<Tracking event="midpoint">${DOMAIN}/tracker?event=midPoint</Tracking>
+							<Tracking event="thirdQuartile">${DOMAIN}/tracker?event=thirdQuartile</Tracking>
+							<Tracking event="complete">${DOMAIN}/tracker?event=complete</Tracking>
+							<Tracking event="mute">${DOMAIN}/tracker?event=mute</Tracking>
+							<Tracking event="unmute">${DOMAIN}/tracker?event=unmute</Tracking>
+							<Tracking event="pause">${DOMAIN}/tracker?event=pause</Tracking>
+							<Tracking event="resume">${DOMAIN}/tracker?event=resume</Tracking>
+							<Tracking event="fullscreen">${DOMAIN}/tracker?event=fullscreen</Tracking>
+							<Tracking event="close">${DOMAIN}/tracker?event=close</Tracking>
 						</TrackingEvents>
 						<VideoClicks>
 							<ClickThrough>http://www.apple.com</ClickThrough>
