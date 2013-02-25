@@ -4,7 +4,7 @@
 		<InLine>
 			<AdSystem version="0.0.1">PubMatic</AdSystem>
 			<AdTitle>
-<![CDATA[ PubMatic Basic Creative ]]>
+<![CDATA[ PubMatic Basic Non-Linear Creative ]]>
 			</AdTitle>
 			<Description>
 <![CDATA[ PubMatic Test]]>
@@ -14,8 +14,7 @@
 			</Impression>
 			<Creatives>
 				<Creative sequence="1" id="331">
-					<Linear>
-						<Duration>00:00:10</Duration>
+					<NonLinearAds>
 						<TrackingEvents>
 							<Tracking event="firstQuartile">${DOMAIN}/tracker?event=firstQuartile</Tracking>
 							<Tracking event="midpoint">${DOMAIN}/tracker?event=midPoint</Tracking>
@@ -28,15 +27,11 @@
 							<Tracking event="fullscreen">${DOMAIN}/tracker?event=fullscreen</Tracking>
 							<Tracking event="close">${DOMAIN}/tracker?event=close</Tracking>
 						</TrackingEvents>
-						<VideoClicks>
-							<ClickThrough>http://www.apple.com</ClickThrough>
-						</VideoClicks>
-						<MediaFiles>
-							<MediaFile delivery="progressive" bitrate="512" width="480" height="352" type="video/x-flv">
-<![CDATA[http://cdn.liverail.com/adasset4/1331/229/331/hi.flv]]>
-							</MediaFile>
-						</MediaFiles>
-					</Linear>
+						<NonLinear width="432" height="136" minSuggestedDuration="00:00:05">
+  							<StaticResource creativeType="image/png"><![CDATA[${DOMAIN}/432x136.png]]></StaticResource>
+							<NonLinearClickThrough>http://www.pubmatic.com</NonLinearClickThrough>
+ 						</NonLinear>
+					</NonLinearAds>
 				</Creative>
 			</Creatives>
 		</InLine>

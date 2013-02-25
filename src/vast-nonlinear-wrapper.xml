@@ -3,7 +3,7 @@
 		<Wrapper>
 			<AdSystem>PubMatic</AdSystem>
 			<VASTAdTagURI>
-				${DOMAIN}/getvast?comp
+				${DOMAIN}/getvast?nonlin
 			</VASTAdTagURI>
 			<Error>http://myErrorURL/wrapper/error</Error>
 			<Impression><![CDATA[${DOMAIN}/tracker?wrap&event=impression]]></Impression>
@@ -46,17 +46,6 @@
 							<ClickTracking><![CDATA[${DOMAIN}/tracker?wrap&event=click]]></ClickTracking>
 						</VideoClicks>
 					</Linear>
-				</Creative>
-				<Creative AdID="2323" id="111" sequence="1">
-					<CompanionAds>
-						<Companion width="300" height="250">
-							<TrackingEvents>
-								<Tracking event="creativeView">
-									<![CDATA[${DOMAIN}/tracker?wrap&event=compImp]]>
-								</Tracking>
-							</TrackingEvents>
-						</Companion>
-					</CompanionAds>
 				</Creative>
 			</Creatives>
 		</Wrapper>

@@ -1,5 +1,5 @@
 <VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast_2.0.1.xsd">
-	<Ad id="1234">
+	<Ad id="2323">
 		<InLine>
 			<AdSystem version="0.0.1">PubMatic</AdSystem>
 			<AdTitle>
@@ -11,7 +11,7 @@
 			<Impression id="PM">
 				${DOMAIN}/tracker?event=impression</Impression>
 			<Creatives>
-				<Creative sequence="1" id="331">
+				<Creative AdID="2323" sequence="1" id="111">
 					<Linear>
 						<Duration>00:00:09</Duration>
 						<TrackingEvents>
@@ -52,7 +52,7 @@ http://cdn.liverail.com/adasset4/1331/229/331/hi.flv
 						</MediaFiles>
 					</Linear>
 				</Creative>
-				<Creative sequence="1" id="331">
+				<Creative AdID="2323" sequence="1" id="111">
 					<CompanionAds>
 						<Companion width="300" height="250">
 							<StaticResource creativeType="image/gif">

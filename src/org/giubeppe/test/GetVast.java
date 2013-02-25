@@ -42,25 +42,35 @@ public class GetVast extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
+		boolean nonlin = (request.getParameter("nonlin") != null);
 		boolean wrapper = (request.getParameter("wrap") != null);
 		boolean comp = (request.getParameter("comp") != null);
 		boolean compw = (request.getParameter("compw") != null);
 		
 		String vastTemplate;
-		if (compw) {
-			vastTemplate = "/vast-wrapper-WITH-companion.xml";
+		if (nonlin) {
+			
+			if (wrapper)
+				vastTemplate = "/vast-nonlinear-wrapper.xml";
+			else 
+				vastTemplate = "/vast-nonlinear-basic.xml";
+			
 		} else {
-			if (wrapper) {
-				if (comp)
-					vastTemplate = "/vast-companion-wrapper.xml";
-				else
-					vastTemplate = "/vast-wrapper.xml";
+			if (compw) {
+				vastTemplate = "/vast-wrapper-WITH-companion.xml";
 			} else {
-				if (comp) 
-					vastTemplate = "/vast-companion.xml";
-				else
-					vastTemplate = "/vast-basic.xml";
-	//				vastTemplate = "/vast-fox.xml";
+				if (wrapper) {
+					if (comp)
+						vastTemplate = "/vast-companion-wrapper.xml";
+					else
+						vastTemplate = "/vast-wrapper.xml";
+				} else {
+					if (comp) 
+						vastTemplate = "/vast-companion.xml";
+					else
+						vastTemplate = "/vast-basic.xml";
+		//				vastTemplate = "/vast-fox.xml";
+				}
 			}
 		}
 
