@@ -78,6 +78,11 @@ public class GetVast extends HttpServlet {
 		
 		String lines = getResourceAsStringAndExpandMacros(vastTemplate, getMacros(request));
 
+		// implementing CORS
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+		
+		// sending response
 		response.setContentType("text/xml");
 		response.getWriter().write(lines);
 	}

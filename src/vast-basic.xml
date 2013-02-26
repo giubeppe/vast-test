@@ -32,8 +32,11 @@
 							<ClickThrough>http://www.apple.com</ClickThrough>
 						</VideoClicks>
 						<MediaFiles>
-							<MediaFile delivery="progressive" bitrate="512" width="480" height="352" type="video/x-flv">
+ 							<MediaFile delivery="progressive" bitrate="512" width="480" height="352" type="video/x-flv">
 <![CDATA[http://cdn.liverail.com/adasset4/1331/229/331/hi.flv]]>
+							</MediaFile>
+							<MediaFile delivery="progressive" bitrate="512" width="480" height="352" type="video/mp4">
+<![CDATA[${DOMAIN}/hi.mp4]]>
 							</MediaFile>
 						</MediaFiles>
 					</Linear>
