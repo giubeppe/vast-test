@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,6 +28,9 @@ import org.giubeppe.test.utils.Macros;
  */
 @WebServlet(name = "getvast", urlPatterns = { "/getvast" })
 public class GetVast extends HttpServlet {
+	
+	private static Logger logger = Logger.getAnonymousLogger();
+	
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -42,6 +47,7 @@ public class GetVast extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
+		boolean dumpHeaders = (request.getParameter("headerdump") != null);
 		boolean nonlin = (request.getParameter("nonlin") != null);
 		boolean wrapper = (request.getParameter("wrap") != null);
 		boolean comp = (request.getParameter("comp") != null);
@@ -69,12 +75,13 @@ public class GetVast extends HttpServlet {
 						vastTemplate = "/vast-companion.xml";
 					else
 						vastTemplate = "/vast-basic.xml";
-		//				vastTemplate = "/vast-fox.xml";
 				}
 			}
 		}
 
-		System.out.println("Serving template: '"+vastTemplate+"'");
+		logger.info("Serving template: '"+vastTemplate+"'");
+		
+		if (dumpHeaders) dumpHeaders(request);
 		
 		String lines = getResourceAsStringAndExpandMacros(vastTemplate, getMacros(request));
 
@@ -85,6 +92,16 @@ public class GetVast extends HttpServlet {
 		// sending response
 		response.setContentType("text/xml");
 		response.getWriter().write(lines);
+	}
+
+	private void dumpHeaders(HttpServletRequest request) {
+		
+		logger.info("========= DUMPING HEADERS =========");
+		for (Enumeration<String> headers = request.getHeaderNames(); headers.hasMoreElements(); ) {
+			String header = headers.nextElement();
+			logger.info("HEADER: '"+header+"' => '"+request.getHeader(header)+"'");
+		}
+		logger.info("===================================");
 	}
 
 	private Map<String, String> getMacros(HttpServletRequest request) {

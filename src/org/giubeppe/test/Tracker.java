@@ -1,6 +1,8 @@
 package org.giubeppe.test;
 
 import java.io.IOException;
+import java.util.logging.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "tracker", urlPatterns = { "/tracker" })
 public class Tracker extends HttpServlet {
+	private static Logger logger = Logger.getAnonymousLogger();
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -30,7 +33,7 @@ public class Tracker extends HttpServlet {
 		String eventValue = request.getParameter("event");
 		boolean wrapper = (request.getParameter("wrap") != null);
 
-		System.out.println((wrapper?"WRAPPER ": "")+"tracking "+eventValue);
+		logger.info((wrapper?"WRAPPER ": "")+"tracking "+eventValue);
 	}
 
 
