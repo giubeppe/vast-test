@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -46,12 +47,19 @@ public class GetVast extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
-		boolean dumpHeaders = (request.getParameter("headerdump") != null);
+
+		boolean headerDump = (request.getParameter("headerdump") != null);
 		boolean nonlin = (request.getParameter("nonlin") != null);
 		boolean wrapper = (request.getParameter("wrap") != null);
 		boolean comp = (request.getParameter("comp") != null);
 		boolean compw = (request.getParameter("compw") != null);
+		
+		logger.info("headerdump: "+headerDump);
+		logger.info("nonlin: "+nonlin);
+		logger.info("wrap: "+wrapper);
+		logger.info("headerdump: "+headerDump);
+		logger.info("comp: "+comp);
+		logger.info("compw: "+compw);
 		
 		String vastTemplate;
 		if (nonlin) {
@@ -81,7 +89,7 @@ public class GetVast extends HttpServlet {
 
 		logger.info("Serving template: '"+vastTemplate+"'");
 		
-		if (dumpHeaders) dumpHeaders(request);
+		if (headerDump) dumpHeaders(request);
 		
 		String lines = getResourceAsStringAndExpandMacros(vastTemplate, getMacros(request));
 
