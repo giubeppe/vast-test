@@ -65,7 +65,10 @@ public class GetVast extends HttpServlet {
 
 		String vastTemplate;
 		if (multi) {
-			vastTemplate = "/multi.xml";
+			if (wrapper) 
+				vastTemplate = "/vast-multi-wrapper.xml";
+			else
+				vastTemplate = "/multi.xml";
 		} else {
 			if (nonlin) {
 

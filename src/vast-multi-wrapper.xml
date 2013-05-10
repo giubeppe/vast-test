@@ -1,0 +1,86 @@
+<VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="vast_2.0.1.xsd">
+	<Ad id="9696">
+		<Wrapper>
+			<AdSystem>PubMatic</AdSystem>
+			<VASTAdTagURI>${DOMAIN}/getvast</VASTAdTagURI>
+			<Error>http://myErrorURL/wrapper/error</Error>
+			<Impression><![CDATA[${DOMAIN}/tracker?wrap&event=impression]]></Impression>
+			<Impression><![CDATA[${DOMAIN}/tracker?wrap&event=impression2]]></Impression>
+			<Creatives>
+				<Creative>
+					<Linear>
+						<TrackingEvents>
+							<Tracking event="firstQuartile">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=firstQuartile]]>
+							</Tracking>
+							<Tracking event="midpoint">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=midPoint]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=thirdQuartile]]>
+							</Tracking>
+							<Tracking event="complete">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=complete]]>
+							</Tracking>
+							<Tracking event="mute">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=mute]]>
+							</Tracking>
+							<Tracking event="unmute">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=unmute]]>
+							</Tracking>
+							<Tracking event="pause">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=pause]]>
+							</Tracking>
+							<Tracking event="resume">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=resume]]>
+							</Tracking>
+							<Tracking event="fullscreen">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=fullscreen]]>
+							</Tracking>
+							<Tracking event="close">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=close]]>
+							</Tracking>
+
+
+							<Tracking event="firstQuartile">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=firstQuartile2]]>
+							</Tracking>
+							<Tracking event="midpoint">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=midPoint2]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=thirdQuartile2]]>
+							</Tracking>
+							<Tracking event="complete">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=complete2]]>
+							</Tracking>
+							<Tracking event="mute">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=mute2]]>
+							</Tracking>
+							<Tracking event="unmute">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=unmute2]]>
+							</Tracking>
+							<Tracking event="pause">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=pause2]]>
+							</Tracking>
+							<Tracking event="resume">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=resume2]]>
+							</Tracking>
+							<Tracking event="fullscreen">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=fullscreen2]]>
+							</Tracking>
+							<Tracking event="close">
+								<![CDATA[${DOMAIN}/tracker?wrap&event=close2]]>
+							</Tracking>
+
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickTracking><![CDATA[${DOMAIN}/tracker?wrap&event=click]]></ClickTracking>
+						</VideoClicks>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</Wrapper>
+	</Ad>
+</VAST>
