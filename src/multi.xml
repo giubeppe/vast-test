@@ -1,0 +1,64 @@
+<!-- ${DATE} -->
+<VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast_2.0.1.xsd">
+	<Ad id="123">
+		<InLine>
+			<AdSystem version="0.0.1">PubMatic</AdSystem>
+			<AdTitle>
+<![CDATA[ PubMatic Basic Creative ]]>
+			</AdTitle>
+			<Description>
+<![CDATA[ PubMatic Test]]>
+			</Description>
+			<Impression id="PM">
+				${DOMAIN}/tracker?event=impression1
+			</Impression>
+			<Impression id="PM2">
+				${DOMAIN}/tracker?event=impression2
+			</Impression>
+			<Creatives>
+				<Creative sequence="1" id="331">
+					<Linear>
+						<Duration>00:00:10</Duration>
+						<TrackingEvents>
+							<Tracking event="firstQuartile">${DOMAIN}/tracker?event=firstQuartile</Tracking>
+							<Tracking event="midpoint">${DOMAIN}/tracker?event=midPoint</Tracking>
+							<Tracking event="thirdQuartile">${DOMAIN}/tracker?event=thirdQuartile</Tracking>
+							<Tracking event="complete">${DOMAIN}/tracker?event=complete</Tracking>
+							<Tracking event="mute">${DOMAIN}/tracker?event=mute</Tracking>
+							<Tracking event="unmute">${DOMAIN}/tracker?event=unmute</Tracking>
+							<Tracking event="pause">${DOMAIN}/tracker?event=pause</Tracking>
+							<Tracking event="resume">${DOMAIN}/tracker?event=resume</Tracking>
+							<Tracking event="fullscreen">${DOMAIN}/tracker?event=fullscreen</Tracking>
+							<Tracking event="close">${DOMAIN}/tracker?event=close</Tracking>
+
+							<Tracking event="firstQuartile">${DOMAIN}/tracker?event=firstQuartile2</Tracking>
+							<Tracking event="midpoint">${DOMAIN}/tracker?event=midPoint2</Tracking>
+							<Tracking event="thirdQuartile">${DOMAIN}/tracker?event=thirdQuartile2</Tracking>
+							<Tracking event="complete">${DOMAIN}/tracker?event=complete2</Tracking>
+							<Tracking event="mute">${DOMAIN}/tracker?event=mute2</Tracking>
+							<Tracking event="unmute">${DOMAIN}/tracker?event=unmute2</Tracking>
+							<Tracking event="pause">${DOMAIN}/tracker?event=pause2</Tracking>
+							<Tracking event="resume">${DOMAIN}/tracker?event=resume2</Tracking>
+							<Tracking event="fullscreen">${DOMAIN}/tracker?event=fullscreen2</Tracking>
+							<Tracking event="close">${DOMAIN}/tracker?event=close2</Tracking>
+
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickThrough>http://www.apple.com</ClickThrough>
+							<ClickTracking>${DOMAIN}/tracker?event=click</ClickTracking>
+							<ClickTracking>${DOMAIN}/tracker?event=click2</ClickTracking>
+						</VideoClicks>
+						<MediaFiles>
+ 							<MediaFile delivery="progressive" bitrate="512" width="480" height="352" type="video/x-flv">
+<![CDATA[http://cdn.liverail.com/adasset4/1331/229/331/hi.flv]]>
+							</MediaFile>
+							<MediaFile delivery="progressive" bitrate="512" width="480" height="352" type="video/mp4">
+<![CDATA[${DOMAIN}/hi.mp4]]>
+							</MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+</VAST>
